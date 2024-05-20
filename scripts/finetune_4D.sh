@@ -1,3 +1,9 @@
+
+
+
+
+
+
 deepspeed --include localhost:6,7  llava/train/train_mem4Drive.py  \
     --model_name_or_path meta-llama/Meta-Llama-3-8B \
     --deepspeed ./scripts/zero3.json \

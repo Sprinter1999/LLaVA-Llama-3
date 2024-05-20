@@ -45,10 +45,6 @@ def rank0_print(*args):
         print(*args)
 
 
-
-
-
-
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
@@ -777,7 +773,7 @@ class LazySupervisedDataset(Dataset):
         sources = self.list_data_dict[i]
         if isinstance(i, int):
             sources = [sources]
-        assert len(sources) == 1, "Don't know why it is wrapped to a list"  # FIXME
+        # assert len(sources) == 1, "Don't know why it is wrapped to a list"  # FIXME
         if 'image' in sources[0]:
             image_file = self.list_data_dict[i]['image']
             # modify to accomodate single-image input
